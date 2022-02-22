@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -7,25 +6,23 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project1';
 
-  cena = 0;
+  dec = 0;
+  v = 0;
 
-  public toBin(){
+  bits: boolean[] = [false, false, false, false, false, false, false, false];
 
+  public toBin() {
+    let bin = ((this.dec >>> 0).toString(2)).padStart(8, '0');
+    for (let i = 0; i < bin.length; i++) {
+      if (i < bin.length && bin[i] == '1') {
+        this.bits[7 - i] = true;
+      } else {
+        this.bits[7 - i] = false;
+      }
+    }
   }
+  /*
   public toDec(){
-
-  }
-
-
-
-  form: FormGroup;
-  constructor(){
-    this.form = new FormGroup({
-      username: new FormControl(),
-      password: new FormControl()
-    });
-  }
-
+  }*/
 }
