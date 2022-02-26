@@ -9,7 +9,7 @@
     <h1>OSOBY</h1>
     Id:<input [(ngModel)]="osoba.id"><br>
     Meno:<input [(ngModel)]="osoba.meno"><br>
-    Kontakt:<input [ngModel]="osoba.kontakt"><br>
+    Kontakt:<input [(ngModel)]="osoba.kontakt"><br>
 
     <button (click)="pridaj()">PRIDAJ</button><br>
     Zoznam:<br>
@@ -21,7 +21,20 @@
 
   <div *ngIf="aktMenu == menu.KNIHY">
     <h1>KNIHY</h1>
+    Id:<input [(ngModel)]="kniha.id"><br>
+    Názov:<input [(ngModel)]="kniha.nazov"><br>
+    Autor:<input [(ngModel)]="kniha.autor"><br>
+    Dostupnosť:<input [(ngModel)]="kniha.d"><br>
+
+    <button (click)="pridaj1()">PRIDAJ</button><br>
+
+    Zoznam:<br>
+
+    <div *ngFor="let k of knihy">
+      {{k.id}} {{k.nazov}} {{k.autor}} {{k.d}}
+    </div>
   </div>
+
 
   <div *ngIf="aktMenu == menu.VYPOZICKY">
     <h1>VYPOZICKY</h1>
