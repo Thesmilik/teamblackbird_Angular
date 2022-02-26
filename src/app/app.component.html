@@ -1,18 +1,29 @@
 <div class="content" role="main">
+  {{title}}<br>
 
-  dec: <input [(ngModel)]="dec"(change)="toBin()">
+  <button (click)="otvorMenu(menu.OSOBY)">OSOBY</button>
+  <button (click)="otvorMenu(menu.KNIHY)">KNIHY</button>
+  <button (click)="otvorMenu(menu.VYPOZICKY)">VYPOZICKY</button>
 
-  <br><br>
-  <a>&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0</a>
-  <br>
+  <div *ngIf="aktMenu == menu.OSOBY">
+    <h1>OSOBY</h1>
+    Id:<input [(ngModel)]="osoba.id"><br>
+    Meno:<input [(ngModel)]="osoba.meno"><br>
+    Kontakt:<input [ngModel]="osoba.kontakt"><br>
 
-  <input type="checkbox" [(ngModel)]="bits[7]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[6]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[5]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[4]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[3]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[2]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[1]" (change)="toDec()">
-  <input type="checkbox" [(ngModel)]="bits[0]" (change)="toDec()">
+    <button (click)="pridaj()">PRIDAJ</button><br>
+    Zoznam:<br>
 
+    <div *ngFor="let o of osoby">
+      {{o.id}} {{o.meno}} {{o.kontakt}}
+    </div>
+  </div>
+
+  <div *ngIf="aktMenu == menu.KNIHY">
+    <h1>KNIHY</h1>
+  </div>
+
+  <div *ngIf="aktMenu == menu.VYPOZICKY">
+    <h1>VYPOZICKY</h1>
+  </div>
 </div>
