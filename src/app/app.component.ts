@@ -15,6 +15,9 @@ export class AppComponent {
   knihy: any = [];
   kniha = {id:"1", nazov:"Malý princ Paťko", autor:"Jožo Alvarez", d:"5"};
 
+  vypozicky: any = [];
+  vypozicka = {id:"1", kniha:"Malý torpédoborec Maťko", osoba:"Miro Šampion"};
+
   menu = MENU;
   aktMenu: MENU = MENU.OSOBY;
 
@@ -28,5 +31,9 @@ export class AppComponent {
 
   public pridaj1(): void{
     this.knihy.push({id: this.kniha.id, nazov: this.kniha.nazov, autor: this.kniha.autor, d: this.kniha.d});
+  }
+
+  public pridaj2(): void{
+    this.vypozicky.push({id: this.vypozicka.id, kniha: this.vypozicka.kniha, osoba: this.vypozicka.osoba});
   }
 }
