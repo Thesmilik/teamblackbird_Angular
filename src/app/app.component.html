@@ -5,20 +5,8 @@
   <button (click)="otvorMenu(menu.KNIHY)">KNIHY</button>
   <button (click)="otvorMenu(menu.VYPOZICKY)">VYPOZICKY</button>
 
-  <div *ngIf="aktMenu == menu.OSOBY">
-    <h1>OSOBY</h1>
-    Id:<input [(ngModel)]="osoba.id"><br>
-    Meno:<input [(ngModel)]="osoba.meno"><br>
-    Kontakt:<input [(ngModel)]="osoba.kontakt"><br>
-
-    <button (click)="pridaj()">PRIDAJ</button><br>
-    Zoznam:<br>
-
-    <div *ngFor="let o of osoby">
-      {{o.id}} {{o.meno}} {{o.kontakt}}
-    </div>
-  </div>
-
+  <router-outlet></router-outlet>
+  <!--
   <div *ngIf="aktMenu == menu.KNIHY">
     <h1>KNIHY</h1>
     Id:<input [(ngModel)]="kniha.id"><br>
@@ -49,4 +37,5 @@
       {{v.id}} {{v.kniha}} {{v.osoba}}
     </div>
   </div>
+  -->
 </div>
