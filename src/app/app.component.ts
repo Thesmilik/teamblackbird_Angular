@@ -10,20 +10,21 @@ enum MENU { OSOBY, KNIHY, VYPOZICKY}
 export class AppComponent {
   title = 'Formuláre na evidenciu zákazníkov, kníh a výpožičiek.\n';
 
-  knihy: any = [];
-  kniha = {id:"1", nazov:"Malý princ Paťko", autor:"Jožo Alvarez", d:"5"};
 
   vypozicky: any = [];
-  vypozicka = {id:"1", kniha:"Malý torpédoborec Maťko", osoba:"Miro Šampion"};
+  vypozicka = {id: "1", kniha: "Malý torpédoborec Maťko", osoba: "Miro Šampion"};
 
   menu = MENU;
 
   constructor(private router: Router) {
   }
 
-  otvorMenu(m: MENU){
-    if (m == MENU.OSOBY){
+  otvorMenu(m: MENU) {
+    if (m == MENU.OSOBY) {
       this.router.navigate(["/osoba"]);
+    } if (m == MENU.KNIHY){
+      this.router.navigate(["/kniha"]);
     }
   }
+
 }
