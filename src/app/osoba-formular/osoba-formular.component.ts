@@ -8,7 +8,7 @@ import {Osoba} from "../models/osoba.model";
 })
 export class OsobaFormularComponent{
 
-  osoba: Osoba = {meno:"aaa", priezvisko:"bbb"};
+  osoba: Osoba = {id:"1",meno:"aaa", priezvisko:"bbb"};
 
   constructor() { }
 
