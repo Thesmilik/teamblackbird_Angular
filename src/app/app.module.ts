@@ -11,6 +11,9 @@ import {AppRoutingModule} from "./app-routing.module";
 import { KnihaFormularComponent } from './kniha-formular/kniha-formular.component';
 import { KnihaStrankaComponent } from './kniha-stranka/kniha-stranka.component';
 import { KnihaZoznamComponent } from './kniha-zoznam/kniha-zoznam.component';
+import { VypozickyFormularComponent } from './vypozicky-formular/vypozicky-formular.component';
+import { VypozickyStrankaComponent } from './vypozicky-stranka/vypozicky-stranka.component';
+import { VypozickyZoznamComponent } from './vypozicky-zoznam/vypozicky-zoznam.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { KnihaZoznamComponent } from './kniha-zoznam/kniha-zoznam.component';
     OsobaStrankaComponent,
     KnihaFormularComponent,
     KnihaStrankaComponent,
-    KnihaZoznamComponent
+    KnihaZoznamComponent,
+    VypozickyFormularComponent,
+    VypozickyStrankaComponent,
+    VypozickyZoznamComponent
   ],
   imports: [
     BrowserModule,

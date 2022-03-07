@@ -11,9 +11,6 @@ export class AppComponent {
   title = 'Formuláre na evidenciu zákazníkov, kníh a výpožičiek.\n';
 
 
-  vypozicky: any = [];
-  vypozicka = {id: "1", kniha: "Malý torpédoborec Maťko", osoba: "Miro Šampion"};
-
   menu = MENU;
 
   constructor(private router: Router) {
@@ -22,9 +19,12 @@ export class AppComponent {
   otvorMenu(m: MENU) {
     if (m == MENU.OSOBY) {
       this.router.navigate(["/osoba"]);
-    } if (m == MENU.KNIHY){
+    }
+    if (m == MENU.KNIHY){
       this.router.navigate(["/kniha"]);
     }
+    if (m == MENU.VYPOZICKY){
+      this.router.navigate(["/vypozicka"]);
+    }
   }
-
 }
