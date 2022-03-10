@@ -1,3 +1,11 @@
-<app-osoba-formular></app-osoba-formular>
+<app-osoba-formular
+  [osoba]="osobaNaUpravu"
+  (pridajOsobu)="pridaj($event)"
+  (upravOsobu)="uprav($event)"
+></app-osoba-formular>
 
-<app-osoby-zoznam></app-osoby-zoznam>
+<app-osoby-zoznam
+  [osoby]="osoby"
+  (upravOsobu)="upravZoZoznamu($event)"
+  (zmazOsobu)="zmaz($event)"
+></app-osoby-zoznam>

@@ -1,6 +1,5 @@
 export class Osoba {
-
-  id: string;
+  id?: string;
   meno: string;
   priezvisko: string;
 

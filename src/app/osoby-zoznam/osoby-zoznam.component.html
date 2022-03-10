@@ -1,3 +1,19 @@
-<div *ngFor="let o of osoby">
-  {{o.meno}} {{o.priezvisko}}
-</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Meno</th>
+    <th>Priezvisko</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let osoba of osoby">
+    <td>{{osoba.meno}}</td>
+    <td>{{osoba.priezvisko}}</td>
+    <td>
+      <button (click)="uprav(osoba)">Upraviť</button>
+      <button (click)="zmaz(osoba.id)">Zmazať</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

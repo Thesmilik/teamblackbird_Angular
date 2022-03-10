@@ -1,4 +1,11 @@
 <h1>OSOBY</h1>
-Id:<input [(ngModel)]="osoba.id"><br>
-Meno:<input [(ngModel)]="osoba.meno"><br>
-Priezvisko:<input [ngModel]="osoba.priezvisko"><br>
+<form [formGroup]="formular">
+  meno:
+  <input formControlName="meno"><br>
+  priezvisko:
+  <input formControlName="priezvisko"><br>
+
+  <button *ngIf="formular.value.id === null" (click)="pridaj()">PRIDAJ</button>
+
+  <button *ngIf="formular.value.id !== null" (click)="uprav()">UPRAV</button>
+</form>
