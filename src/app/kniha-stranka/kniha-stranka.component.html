@@ -4,4 +4,8 @@
   (upravKnihu)="uprav($event)"
 ></app-kniha-formular>
 
-<app-kniha-zoznam></app-kniha-zoznam>
+<app-kniha-zoznam
+  [knihy]="knihy"
+  (upravKnihu)="uprav($event)"
+  (zmazKnihu)="zmaz($event)"
+></app-kniha-zoznam>
