@@ -1,2 +1,11 @@
-<app-vypozicky-formular></app-vypozicky-formular>
-<app-vypozicky-zoznam></app-vypozicky-zoznam>
+<app-vypozicky-formular
+  [vypozicka]="vypozickyNaUpravu"
+  (pridajVypozicku)="pridaj($event)"
+  (upravVypozicku)="uprav($event)"
+></app-vypozicky-formular>
+
+<app-vypozicky-zoznam
+  [vypozicky]="vypozicky"
+  (upravVypozicku)="upravZoZoznamu($event)"
+  (zmazVypozicku)="zmaz($event)"
+></app-vypozicky-zoznam>

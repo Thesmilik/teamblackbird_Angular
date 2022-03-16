@@ -1,4 +1,11 @@
 <h1>VYPOZICKY</h1>
-Id:<input [(ngModel)]="vypozicka.id"><br>
-Kniha:<input [(ngModel)]="vypozicka.kniha"><br>
-Osoba:<input [(ngModel)]="vypozicka.osoba"><br>
+<form [formGroup]="formular">
+  Kniha:
+  <input formControlName="Kniha"><br>
+  Osoba:
+  <input formControlName="Osoba"><br>
+
+  <button *ngIf="formular.value.id === null" (click)="pridaj()">PRIDAJ</button>
+
+  <button *ngIf="formular.value.id !== null" (click)="uprav()">UPRAV</button>
+</form>

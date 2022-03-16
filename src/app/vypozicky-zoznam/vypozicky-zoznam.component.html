@@ -1,3 +1,19 @@
-<div *ngFor="let v of vypozicky">
-  {{v.id}} {{v.kniha}} {{v.osoba}}
-</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Kniha</th>
+    <th>Osoba</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let vypozicka of vypozicky">
+    <td>{{vypozicka.osoba}}</td>
+    <td>{{vypozicka.kniha}}</td>
+    <td>
+      <button (click)="uprav(vypozicka)">Upraviť</button>
+      <button (click)="zmaz(vypozicka.id)">Zmazať</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
