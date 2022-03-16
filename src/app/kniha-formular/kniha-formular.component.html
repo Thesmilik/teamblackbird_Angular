@@ -1,5 +1,13 @@
 <h1>KNIHY</h1>
-Id:<input [(ngModel)]="kniha.id"><br>
-Názov:<input [(ngModel)]="kniha.nazov"><br>
-Autor:<input [(ngModel)]="kniha.autor"><br>
-Dostupnosť:<input [(ngModel)]="kniha.d"><br>
+<form [formGroup]="formular">
+  Názov
+  <input formControlName="nazov"><br>
+  Autor:
+  <input formControlName="autor"><br>
+  Dostupnosť:
+  <input formControlName="dostupnost">
+
+  <button *ngIf="formular.value.id === null" (click)="pridaj()">PRIDAJ</button>
+
+  <button *ngIf="formular.value.id !== null" (click)="uprav()">UPRAV</button>
+</form>

@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Osoba} from "../models/osoba.model";
 
 @Component({
-  selector: 'app-osoby-zoznam',
+  selector: 'app-osoba-zoznam',
   templateUrl: './osoby-zoznam.component.html',
   styleUrls: ['./osoby-zoznam.component.css']
 })

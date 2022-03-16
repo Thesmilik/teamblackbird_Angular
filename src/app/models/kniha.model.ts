@@ -1,15 +1,15 @@
 export class Kniha {
 
-  id: string;
+  id?: string;
   autor: string;
   nazov: string;
-  d: string;
+  dostupnost: string;
 
-  constructor(kniha: Kniha) {
-    this.id = kniha.id;
-    this.autor = kniha.autor;
-    this.nazov = kniha.nazov;
-    this.d = kniha.d;
+
+  constructor(id: string, autor: string, nazov: string, dostupnost: string) {
+    this.id = id;
+    this.autor = autor;
+    this.nazov = nazov;
+    this.dostupnost = dostupnost;
   }
-
 }
