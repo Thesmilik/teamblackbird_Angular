@@ -1,3 +1,21 @@
-<div *ngFor="let k of knihy">
-  {{k.id}} {{k.nazov}} {{k.autor}} {{k.dostupnost}}
-</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Názov</th>
+    <th>Autor</th>
+    <th>Dostupnosť</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let kniha of knihy">
+    <td>{{kniha.nazov}}</td>
+    <td>{{kniha.autor}}</td>
+    <td>{{kniha.dostupnost}}</td>
+    <td>
+      <button (click)="uprav(kniha)">Upraviť</button>
+      <button (click)="zmaz(kniha.id)">Zmazať</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
