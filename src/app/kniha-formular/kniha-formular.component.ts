@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Kniha} from "../models/kniha.model";
 import {FormControl, FormGroup} from "@angular/forms";
-import {Osoba} from "../models/osoba.model";
 
 @Component({
   selector: 'app-kniha-formular',
