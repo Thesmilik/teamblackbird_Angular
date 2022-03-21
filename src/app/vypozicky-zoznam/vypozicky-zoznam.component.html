@@ -8,8 +8,8 @@
   </thead>
   <tbody>
   <tr *ngFor="let vypozicka of vypozicky">
-    <td>{{vypozicka.osoba}}</td>
     <td>{{vypozicka.kniha}}</td>
+    <td>{{vypozicka.osoba}}</td>
     <td>
       <button (click)="uprav(vypozicka)">Upraviť</button>
       <button (click)="zmaz(vypozicka.id)">Zmazať</button>
